@@ -1,0 +1,34 @@
+# 对于后端而言除了value值以外，name、des、type这些属性都是没有价值的
+system: # 配置类型，配置什么？system是整个项目的，global在python中属于关键字所以用system替代
+  LOGGING_LEVEL: # 配置项：项目的 logging_level 即项目的日志等级
+    name: 日志等级  # name 前端展示的字段
+    des: 日志等级   # des 前端 展示所用 placeholder字段
+    type: input    # type 前端渲染的类型，例如input textarea select
+    value: debug   # value logging_level 的具体值
+
+  LOGGING_FILE:
+    name: 日志文件
+    des: 存储日志的文件路径
+    type: input
+    value: log.log
+
+  SECRET_KEY:
+    name: 签名
+    des: 签名
+    type: password
+    value: 1980a86729c4f938f910c35599f7e6601fa4e2d8c78b789c9571e0f86f638666
+
+  ALGORITHM:
+    name: 加密方式
+    des: 加密方式
+    type: input
+    value: HS256
+
+  EXPIRE_MIN:
+    name: token过期时间
+    des: token过期时间/min
+    type: input
+    value: 30
+
+
+
